@@ -9,12 +9,19 @@ import ArticleList from "./Pages/ArticleList";
 import ArticleDetails from "./Pages/ArticleDetails";
 import AdminArticleList from "./Pages/AdminArticleList";
 import ArticleForm from "./Pages/ArticleForm";
+import Header from "./Header"; // Import the Header component
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false); // Change to 'false' for testing simple user
 
+  const toggleAdmin = () => {
+    setIsAdmin((prevIsAdmin) => !prevIsAdmin);
+  };
+
   return (
     <Router>
+      <Header isAdmin={isAdmin} toggleAdmin={toggleAdmin} />{" "}
+      {/* Add Header component */}
       <Routes>
         {/* Public Routes */}
 
