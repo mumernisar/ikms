@@ -18,5 +18,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+console.log("connection success ful", process.env.FIREBASE_API_KEY);
 
 export { db };
