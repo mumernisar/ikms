@@ -52,7 +52,7 @@ export const fetchArticleDetails = async (id) => {
   return response.data;
 };
 export const searchArticles = async (query) => {
-  const response = await axios.post("http://localhost:5000/articles/search", {
+  const response = await axios.post(`{BASE_URL}/articles/search`, {
     query,
   });
   return response.data;
