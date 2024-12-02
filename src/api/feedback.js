@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5000"; // Replace with your backend URL
+const BASE_URL = "https://ikms-backend.onrender.com";
 
 // Create a feedback entry for a specific article
 export const createFeedback = async (articleId, feedbackData) => {
   try {
     const response = await axios.post(
-      `${API_BASE_URL}/articles/${articleId}/feedback`,
+      `${BASE_URL}/articles/${articleId}/feedback`,
       feedbackData
     );
     return response.data;
@@ -20,7 +20,7 @@ export const createFeedback = async (articleId, feedbackData) => {
 export const getFeedbackByArticleId = async (articleId) => {
   try {
     const response = await axios.get(
-      `${API_BASE_URL}/articles/${articleId}/feedback`
+      `${BASE_URL}/articles/${articleId}/feedback`
     );
     return response.data;
   } catch (error) {
@@ -33,7 +33,7 @@ export const getFeedbackByArticleId = async (articleId) => {
 export const deleteFeedback = async (articleId, feedbackId) => {
   try {
     const response = await axios.delete(
-      `${API_BASE_URL}/articles/${articleId}/feedback/${feedbackId}`
+      `${BASE_URL}/articles/${articleId}/feedback/${feedbackId}`
     );
     return response.data;
   } catch (error) {
