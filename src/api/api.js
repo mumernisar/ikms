@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://ikms-backend.onrender.com"; // Backend URL
+const BASE_URL = "http://localhost:5000/"; // Backend URL
 
 export const fetchArticles = async () => {
   const response = await axios.get(`${BASE_URL}/articles`);

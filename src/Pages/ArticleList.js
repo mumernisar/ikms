@@ -65,7 +65,7 @@ const ArticleList = () => {
       <Typography
         variant="h4"
         gutterBottom
-        style={{ textAlign: "center", marginTop: "20px", color: "#1976d2" }}
+        style={{ textAlign: "center", marginTop: "20px", color: "black" }}
       >
         Explore Articles
       </Typography>
